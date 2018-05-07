@@ -18,7 +18,7 @@ public class EmployeeController {
     @RequestMapping("/employees")
     String getEmployees(Model model) {
 
-        model.addAttribute("message", "hello world");
+        model.addAttribute("employees", employeeRepository.getAllEmployees());
 
         return "employees";
     }
